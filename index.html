@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santiago Sunier | Portfolio Profesional</title>
+    <title>Santiago Sunier | Estudiante de Analista Programador</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -37,12 +37,6 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes glow {
-            0% { box-shadow: 0 0 5px var(--accent-cyan); }
-            50% { box-shadow: 0 0 20px var(--accent-cyan); }
-            100% { box-shadow: 0 0 5px var(--accent-cyan); }
         }
 
         /* --- Navegación --- */
@@ -105,13 +99,13 @@
 
         .hero span {
             color: var(--accent-cyan);
-            text-shadow: 0 0 15px rgba(94, 106, 110, 0.4);
+            text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
         }
 
         .hero p {
             font-size: 1.2rem;
             color: var(--text-dim);
-            max-width: 600px;
+            max-width: 650px;
             margin-bottom: 2rem;
             animation: fadeIn 1.2s ease-out;
         }
@@ -155,11 +149,11 @@
             margin: 10px auto;
         }
 
-        /* --- Sobre Mí --- */
+        /* --- Sobre Mí / Perfil Profesional --- */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
             align-items: center;
         }
 
@@ -168,10 +162,16 @@
             color: var(--text-dim);
         }
 
-        /* --- Skills --- */
+        .academic-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* --- Skills & Cursos --- */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
         }
 
@@ -201,6 +201,10 @@
             color: var(--text-dim);
         }
 
+        .skill-list li {
+            margin-bottom: 0.5rem;
+        }
+
         .skill-list li::before {
             content: "▹";
             color: var(--accent-cyan);
@@ -210,28 +214,32 @@
         /* --- Proyectos --- */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: 1fr;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .project-card {
             background: var(--card-bg);
             border-radius: 15px;
-            overflow: hidden;
-            position: relative;
+            padding: 2.5rem;
             border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
         }
 
-        .project-info { padding: 2rem; }
+        .project-card:hover {
+            border-color: var(--accent-cyan);
+        }
 
         .project-tags {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 1rem;
         }
 
         .tag {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             background: rgba(0, 242, 255, 0.1);
             color: var(--accent-cyan);
             padding: 4px 12px;
@@ -245,6 +253,21 @@
             background: var(--card-bg);
             padding: 3rem;
             border-radius: 25px;
+        }
+
+        .contact-info-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            list-style: none;
+            color: var(--text-dim);
+        }
+
+        .contact-info-list li i {
+            color: var(--accent-cyan);
+            margin-right: 8px;
         }
 
         .form-group { margin-bottom: 1.5rem; }
@@ -263,8 +286,8 @@
 
         .social-links {
             text-align: center;
-            margin-top: 3rem;
-            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.8rem;
         }
 
         .social-links a {
@@ -289,107 +312,115 @@
         <div class="logo">SANTIAGO.DEV</div>
         <ul class="nav-links">
             <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#about">Perfil</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#courses">Formación</a></li>
+            <li><a href="#projects">Experiencia</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
 
-   <section class="hero" id="home">
-        <h1>Hola, soy <span>Santiago</span></h1>
-        <p>Analista Programador & Gestión de Bases de Datos | Ingeniería Informática</p>
-        <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+    <section class="hero" id="home">
+        <h1>Santiago <span>Sunier</span></h1>
+        <p>Estudiante de Analista Programador | C++, C# y Programación Orientada a Objetos</p>
+        <a href="#projects" class="btn btn-primary">Ver Experiencia</a>
     </section>
 
-   <section id="about">
-        <h2>Sobre mí</h2>
+    <section id="about">
+        <h2>Perfil Profesional</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Actualmente curso el 2do año de la carrera <strong>Analista Programador en la UAI</strong> de forma virtual, complementando mi perfil con una sólida formación de <strong>2 años previos en Ingeniería Informática en la UNL (Universidad Nacional del Litoral)</strong>.</p>
-                <p>Este trasfondo en ingeniería me brindó una gran estructura mental, un fuerte dominio de la Programación Orientada a Objetos (POO) y una alta capacidad para resolver problemas complejos desde la lógica pura.</p>
-                <p>Hoy, proyecto mi carrera hacia <strong>la Gestión de Bases de Datos (MySQL, Power BI, Analisis Funcional).</strong></p>
+                <p>Estudiante de Analista Programador, con conocimientos en <strong>C++, C# y Programación Orientada a Objetos</strong>[cite: 9].</p>
+                <p>Poseo pensamiento lógico, capacidad de resolución de problemas y facilidad para aprender y adaptarme a nuevas tecnologías[cite: 9]. Me caracterizo por la responsabilidad, el compromiso y la proactividad[cite: 9].</p>
+                <p>Mi objetivo es integrarme a un equipo de sistemas donde pueda aportar mis habilidades en desarrollo de software y soporte técnico[cite: 9].</p>
             </div>
-            <div class="academic-timeline" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="academic-timeline">
                 <div class="skill-card" style="border-left: 4px solid var(--accent-cyan); padding: 1.5rem;">
                     <h4>Analista Programador</h4>
-                    <p style="font-size: 0.85rem; color: var(--accent-cyan);">UAI Virtual • En curso (2do Año)</p>
+                    <p style="font-size: 0.9rem; color: var(--text-main);">Universidad Abierta Interamericana</p>
+                    <p style="font-size: 0.85rem; color: var(--accent-cyan);">Modalidad a distancia • 2025 - Actualidad</p>
                 </div>
                 <div class="skill-card" style="border-left: 4px solid var(--accent-blue); padding: 1.5rem;">
                     <h4>Ingeniería Informática</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-dim);">UNL Santa Fe • 2 años completados</p>
+                    <p style="font-size: 0.9rem; color: var(--text-main);">Universidad Nacional del Litoral (UNL)</p>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">2 años completos cursados y aprobados • 2023 - 2024</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="skills">
-        <h2>Habilidades Técnicas</h2>
+        <h2>Lenguajes y Tecnologías</h2>
         <div class="skills-grid">
             <div class="skill-card">
                 <i class="fas fa-code"></i>
-                <h3>Lenguajes</h3>
+                <h3>Lenguajes & Datos</h3>
                 <ul class="skill-list">
-                    <li>C++ / C# (POO)</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>PHP</li>
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>SQL (MySQL) y gestión con phpMyAdmin</li>
                 </ul>
             </div>
             <div class="skill-card">
-                <i class="fas fa-database"></i>
-                <h3>Datos & Análisis</h3>
+                <i class="fas fa-globe"></i>
+                <h3>Web</h3>
                 <ul class="skill-list">
-                    <li>MySQL / MariaDB</li>
-                    <li>Análisis Funcional</li>
-                    <li>Gestión de Requerimientos</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
                 </ul>
             </div>
             <div class="skill-card">
-                <i class="fas fa-layer-group"></i>
-                <h3>Web & Diseño</h3>
+                <i class="fas fa-cogs"></i>
+                <h3>Otros</h3>
                 <ul class="skill-list">
-                    <li>HTML5 / CSS3 (Grid/Flex)</li>
-                    <li>AutoCAD</li>
-                    <li>Sublimación & Diseño</li>
+                    <li>Programación Orientada a Objetos (POO)</li>
+                    <li>VisSim</li>
+                    <li>Octave</li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <section id="courses">
+        <h2>Cursos y Formación</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-robot"></i>
+                <h3>Ingeniería de Agentes de IA (2025)</h3>
+                <p style="color: var(--accent-cyan); font-size: 0.9rem;">Udemy</p>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.5rem;">Estado: En curso</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Redes y aplicaciones 5G</h3>
+                <p style="color: var(--accent-cyan); font-size: 0.9rem;">Huawei Talent</p>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.5rem;">Estado: En curso</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Introducción a las Bases de Datos Relacionales</h3>
+                <p style="color: var(--accent-cyan); font-size: 0.9rem;">TodoCode</p>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.5rem;">Con MySQL</p>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
-        <h2>Proyectos Destacados</h2>
+        <h2>Experiencia</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">POO</span>
-                        <span class="tag">ZinJai</span>
-                    </div>
-                    <h3>Sistema de Gestión de Librería</h3>
-                    <p>Desarrollo robusto con persistencia en archivos binarios y manejo de clases avanzadas.</p>
-                    <a href="https://github.com/sun1er/didactic-computing-machine" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: block;">Ver en GitHub →</a>
+                <div class="project-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Windows Forms</span>
+                    <span class="tag">POO</span>
+                    <span class="tag">SHA64</span>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="tag">MySQL</span>
-                        <span class="tag">WampServer</span>
-                    </div>
-                    <h3>Arquitectura de Base de Datos</h3>
-                    <p>Diseño e implementación de esquemas relacionales para gestión de inventarios.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">E-commerce</span>
-                    </div>
-                    <h3>Sublimac</h3>
-                    <p>Simulador de ventas interactivo para emprendimiento personal con catálogo dinámico.</p>
-                </div>
+                <h3>Proyecto de Gestión</h3>
+                <p style="color: var(--text-dim); margin: 1rem 0;">
+                    Desarrollo de aplicación de escritorio con lógica de Programación Orientada a Objetos y gestión de datos[cite: 9]. Manejo de Capas para una mejor organización (DAL, MPP, BE, Seguridad [SHA64], BLL, UI)[cite: 9].
+                </p>
+                <a href="https://github.com/sun1er" target="_blank" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.95rem; font-weight: 600;">Ver proyectos en GitHub →</a>
             </div>
         </div>
     </section>
@@ -397,6 +428,12 @@
     <section id="contact">
         <h2>Contacto</h2>
         <div class="contact-container">
+            <ul class="contact-info-list">
+                <li><i class="fas fa-phone"></i> 3404-634000</li>
+                <li><i class="fas fa-envelope"></i> santi.sunier@gmail.com</li>
+                <li><i class="fas fa-location-dot"></i> Gálvez, Santa Fe</li>
+            </ul>
+
             <form id="contact-form">
                 <div class="form-group">
                     <input type="text" placeholder="Tu Nombre" required>
@@ -405,13 +442,13 @@
                     <input type="email" placeholder="Tu Correo" required>
                 </div>
                 <div class="form-group">
-                    <textarea rows="5" placeholder="Cuéntame sobre tu proyecto o propuesta laboral..."></textarea>
+                    <textarea rows="5" placeholder="Escribe tu mensaje..."></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
             </form>
+
             <div class="social-links">
-                <a href="https://github.com/sun1er"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sun1er/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sun1er" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:santi.sunier@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
@@ -422,7 +459,6 @@
     </footer>
 
     <script>
-        // Animación de aparición al hacer scroll
         const observerOptions = {
             threshold: 0.1
         };
@@ -443,10 +479,9 @@
             observer.observe(section);
         });
 
-        // Manejo del formulario (prevent default para el demo)
         document.getElementById('contact-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('¡Gracias, Santiago! Mensaje enviado.');
+            alert('¡Gracias! Mensaje enviado.');
         });
     </script>
 </body>
